@@ -32,7 +32,7 @@ const SkillsCard = (props) => {
     );
   }, []);
   return (
-    <div className="skills_card" ref={(el) => (skillCardRef = el)}>
+    <div className="skills_card">
       <h2>{props.data.category}</h2>
       <div className="skills_container" ref={(el) => (skillItemRef = el)}>
         {props.data.skills.map((entry) => (

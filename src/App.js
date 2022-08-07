@@ -103,9 +103,6 @@ const App = () => {
     const scene = new THREE.Scene();
 
     // Objects
-    let geometry = new THREE.OctahedronGeometry(0.4, 0);
-    geometry = new THREE.EdgesGeometry(geometry);
-
     let particlesGeometry = new THREE.BufferGeometry();
     let yellowStarsGeometry = new THREE.BufferGeometry();
     let blueStarsGeometry = new THREE.BufferGeometry();

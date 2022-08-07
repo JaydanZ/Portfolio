@@ -34,7 +34,7 @@ const SkillsBody = (props) => {
   }, []);
 
   return (
-    <div className="skills_body-container" ref={(el) => (skillsBodyRef = el)}>
+    <div className="skills_body-container">
       <h1>My Skills</h1>
       <div
         className="skills_display-container"
