@@ -3,19 +3,6 @@ import "./ProjectBody.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import SnapnmixHome from "../../static/snapnmix/snapnmix-home.png";
-import SnapnmixAccount from "../../static/snapnmix/snapnmix-account.png";
-import SnapnmixScan from "../../static/snapnmix/snapnmix-scan.png";
-
-import BlackjackGame from "../../static/blackjack/blackjack-game.png";
-import BlackjackBet from "../../static/blackjack/blackjack-bet.png";
-
-import LiveLiftHome from "../../static/livelift/livelift-home.png";
-import LiveLiftProgram from "../../static/livelift/livelift-program.png";
-
-import FDMSData from "../../static/fdms/fdms-data.png";
-import FDMSHome from "../../static/fdms/fdms-home.png";
-
 import SnapnmixMockup from "../../static/snapnmix/snapnmix-mockup.png";
 import LiveLiftMockup from "../../static/livelift/livelift-mockup.png";
 import FDMSMockup from "../../static/fdms/fdms-mockup.png";

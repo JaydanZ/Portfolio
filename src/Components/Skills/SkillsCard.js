@@ -5,7 +5,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const SkillsCard = (props) => {
   let skillItemRef = useRef();
-  let skillCardRef = useRef();
 
   useEffect(() => {
     // Register gsap pluggin

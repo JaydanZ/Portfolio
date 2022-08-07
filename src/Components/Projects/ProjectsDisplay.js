@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import ProjectBody from "./ProjectBody";
 import "./ProjectsDisplay.css";
 

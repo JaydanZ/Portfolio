@@ -4,8 +4,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-import * as dat from "dat.gui";
 import planetImg from "./static/planet.png";
 import MoonPic from "./static/moon.png";
 import ProjectsDisplay from "./Components/Projects/ProjectsDisplay";
@@ -112,8 +110,6 @@ const App = () => {
     let yellowStarsGeometry = new THREE.BufferGeometry();
     let blueStarsGeometry = new THREE.BufferGeometry();
 
-    let shootingStarGeo = new THREE.BufferGeometry();
-
     const particlesCount = 1000;
 
     const posArr = new Float32Array(particlesCount * 3);
@@ -143,20 +139,11 @@ const App = () => {
       new THREE.BufferAttribute(yellowStarArr, 3)
     );
 
-    // Materials
-
-    const material = new THREE.LineDashedMaterial({
-      color: 0x9ef01a,
-      linewidth: 1,
-      scale: 5,
-      dashSize: 0.4,
-      gapSize: 0.15,
-    });
-
     // Texture Loader
     const loader = new THREE.TextureLoader();
     const cross = loader.load(planetImg);
 
+    // Materials
     const blueStarMaterial = new THREE.PointsMaterial({
       color: 0xabc8ff,
       size: 0.004,
@@ -571,7 +558,12 @@ const App = () => {
             </div>
           </div>
         </div>
-        <img className="moon" src={MoonPic} ref={(el) => (moonRef = el)}></img>
+        <img
+          className="moon"
+          src={MoonPic}
+          ref={(el) => (moonRef = el)}
+          alt=""
+        ></img>
         <canvas className="webgl"></canvas>
       </section>
       <section className="projects" ref={(el) => (projectsSec = el)}>
