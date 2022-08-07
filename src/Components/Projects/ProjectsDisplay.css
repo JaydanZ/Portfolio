@@ -1,0 +1,25 @@
+.project_display_container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-evenly;
+  background-color: rgb(12, 12, 12);
+  z-index: +1;
+}
+
+.project_display {
+  display: flex;
+  height: max-content;
+  width: 80%;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 900px) {
+  .project_display_container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .project_display {
+    align-items: center;
+  }
+}
