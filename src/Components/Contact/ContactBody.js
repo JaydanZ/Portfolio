@@ -125,6 +125,7 @@ const ContactBody = () => {
                   data-netlify="true"
                   onSubmit="submit"
                   className="contact_card_body-form"
+                  netlify
                 >
                   <input type="hidden" name="contact" value="contact form" />
                   <input type="text" placeholder="Name" name="name" />
