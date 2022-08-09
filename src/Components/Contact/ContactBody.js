@@ -19,76 +19,80 @@ const ContactBody = () => {
     gsap.registerPlugin(ScrollTrigger);
     let contactTl = gsap.timeline();
 
-    contactTl.to(contactSection, {
-      scrollTrigger: {
-        trigger: ".contact",
-        start: "top top",
-        pin: true,
+    ScrollTrigger.matchMedia({
+      "(min-width: 901px)": () => {
+        contactTl.to(contactSection, {
+          scrollTrigger: {
+            trigger: ".contact",
+            start: "top top",
+            pin: true,
+          },
+        });
+
+        let mountainTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".contact",
+            start: "middle top",
+            //end: "bottom 100%",
+            scrub: 2,
+          },
+        });
+
+        mountainTl
+          .fromTo(
+            contactFormRef,
+            {
+              y: 1000,
+            },
+            {
+              y: -80,
+            }
+          )
+          .fromTo(
+            mountainFrontRef,
+            {
+              y: 700,
+            },
+            {
+              y: -50,
+              delay: 0.2,
+            },
+            "<"
+          )
+          .fromTo(
+            footerRef,
+            {
+              y: 700,
+            },
+            {
+              y: 0,
+            },
+            "<"
+          )
+          .fromTo(
+            mountainMiddleRef,
+            {
+              y: 500,
+            },
+            {
+              y: 0,
+              delay: 0.2,
+            },
+            "<"
+          )
+          .fromTo(
+            mountainBackRef,
+            {
+              y: 500,
+            },
+            {
+              y: 0,
+              delay: 0.1,
+            },
+            "<"
+          );
       },
     });
-
-    let mountainTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".contact",
-        start: "middle top",
-        //end: "bottom 100%",
-        scrub: 2,
-      },
-    });
-
-    mountainTl
-      .fromTo(
-        contactFormRef,
-        {
-          y: 1000,
-        },
-        {
-          y: -120,
-        }
-      )
-      .fromTo(
-        mountainFrontRef,
-        {
-          y: 700,
-        },
-        {
-          y: -50,
-          delay: 0.2,
-        },
-        "<"
-      )
-      .fromTo(
-        footerRef,
-        {
-          y: 700,
-        },
-        {
-          y: 0,
-        },
-        "<"
-      )
-      .fromTo(
-        mountainMiddleRef,
-        {
-          y: 500,
-        },
-        {
-          y: 0,
-          delay: 0.2,
-        },
-        "<"
-      )
-      .fromTo(
-        mountainBackRef,
-        {
-          y: 500,
-        },
-        {
-          y: 0,
-          delay: 0.1,
-        },
-        "<"
-      );
   }, []);
 
   return (
@@ -104,28 +108,33 @@ const ContactBody = () => {
                     Have projects in mind? Let's work<span> together</span>
                   </h1>
                   <div className="contact_card-links">
-                    <h2>jaydan.zabar@gmail.com</h2>
+                    {/* <h2>jaydan.zabar@gmail.com</h2> */}
                     <a
-                      href="https://www.linkedin.com/in/jaydanzabar/"
-                      className="intro_icons_link"
+                      href="mailto: jaydan.zabar@gmail.com"
+                      className="contact_card-links-email"
                     >
-                      <i className="devicon-linkedin-plain intro_icons"></i>
+                      jaydan.zabar@gmail.com
                     </a>
-                    <a
-                      href="https://github.com/JaydanZ"
-                      className="intro_icons_link"
-                    >
-                      <i className="devicon-github-original intro_icons"></i>
-                    </a>
+                    <div className="contact_card-icon-container">
+                      <a
+                        href="https://www.linkedin.com/in/jaydanzabar/"
+                        className="intro_icons_link"
+                      >
+                        <i className="devicon-linkedin-plain contact_card-links-icons"></i>
+                      </a>
+                      <a
+                        href="https://github.com/JaydanZ"
+                        className="intro_icons_link"
+                      >
+                        <i className="devicon-github-original contact_card-links-icons"></i>
+                      </a>
+                    </div>
                   </div>
                 </div>
                 <form
                   name="contact form"
-                  method="post"
-                  data-netlify="true"
-                  onSubmit="submit"
+                  method="POST"
                   className="contact_card_body-form"
-                  netlify
                 >
                   <input type="hidden" name="contact" value="contact form" />
                   <input type="text" placeholder="Name" name="name" />

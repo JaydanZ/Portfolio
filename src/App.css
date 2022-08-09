@@ -424,7 +424,6 @@ section {
 @media only screen and (max-width: 900px) {
   .navbar {
     transition: background-color 0.1s linear;
-    z-index: 9;
     height: 70px;
   }
   .navbar.active {
@@ -523,6 +522,11 @@ section {
     top: 10%;
     right: 20%;
     margin-right: 0;
+  }
+
+  .contact {
+    margin-top: 30vh;
+    height: max-content;
   }
 }
 

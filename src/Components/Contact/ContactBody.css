@@ -24,14 +24,14 @@ section {
 
 .contact_card {
   width: 1000px;
-  height: 600px;
+  height: 550px;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   border-radius: 10px;
   font-family: var(--primary-ff);
-  z-index: 12;
+  z-index: 20;
   margin-bottom: 100px;
   background-color: rgba(18, 18, 18, 0.65);
   backdrop-filter: saturate(180%) blur(10px);
@@ -51,7 +51,7 @@ section {
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  padding: 50px;
+  padding: 30px;
 }
 
 .contact_card_body-labels {
@@ -83,13 +83,37 @@ section {
   margin-bottom: 40px;
 }
 
-.contact_card-links h2 {
+.contact_card-links-email {
   font-family: var(--primary-ff);
   font-weight: 400;
   font-size: 1.1rem;
   margin: 0;
   margin-top: 10px;
   margin-bottom: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.contact_card-links-icons {
+  color: white;
+  font-size: 2.5rem;
+  margin-right: 1rem;
+}
+
+.contact_card-links-email,
+.contact_card-links-icons {
+  transition: color 0.4s;
+}
+
+.contact_card-links-email:hover,
+.contact_card-links-icons:hover {
+  color: var(--primary-clr);
+}
+
+.contact_card-icon-container {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 10px;
 }
 
 .contact_card_body-form {
@@ -100,7 +124,7 @@ section {
   margin-left: 90px;
   background-color: #111111;
   border-radius: 4px;
-  padding: 40px;
+  padding: 25px;
 }
 
 .contact_card_body-form input[type="text"],
@@ -203,11 +227,15 @@ section {
   }
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 900px) {
+  .mountains_container {
+    height: max-content;
+    overflow: hidden;
+  }
   .contact_card {
     width: 90vw;
     height: max-content;
-    margin-bottom: 20px;
+    margin-bottom: 16vh;
   }
 
   .contact_card_body {
@@ -217,7 +245,7 @@ section {
 
   .contact_card_body-labels h1,
   .contact_card_body-labels span {
-    font-size: 6.5vw;
+    font-size: 5.3vw;
   }
 
   .contact_card_body-labels h1 {
@@ -227,11 +255,24 @@ section {
   .contact_card-links {
     flex-direction: row;
     margin-bottom: 10px;
+    width: 100%;
   }
 
-  .contact_card-links h2 {
+  .contact_card-links-email {
     font-size: 0.8rem;
-    margin: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .contact_card-links-icons {
+    font-size: 2.5rem;
+  }
+
+  .contact_card-icon-container {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 0;
+    margin-left: auto;
   }
 
   .contact_card_body-form {
@@ -249,11 +290,59 @@ section {
     height: 50px;
   }
 
+  .mountain_front {
+    width: 110vw;
+    margin-bottom: 7vh;
+  }
+
+  .mountain_middle {
+    /* width: 110vw; */
+    margin-bottom: 6vh;
+  }
+
+  .mountain_back {
+    width: 120vw;
+    margin-bottom: 8vh;
+  }
+
   .portfolio_footer {
     height: 60px;
   }
 
   .portfolio_footer_text {
     font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .contact_card_header {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+  .contact_card_body {
+    padding: 10px;
+  }
+
+  .contact_card_body-form {
+    padding: 12px;
+  }
+
+  .contact_card_body-form input[type="text"],
+  .contact_card_body-form input[type="email"],
+  .contact_card_body-form textarea {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .contact_card_body-form input[type="text"],
+  .contact_card_body-form input[type="email"],
+  .contact_card_body-form textarea {
+    font-size: 0.8rem;
+  }
+
+  .contact_card-links-icons {
+    font-size: 2rem;
   }
 }

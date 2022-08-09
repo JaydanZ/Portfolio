@@ -329,7 +329,7 @@
   }
 
   .project_desc_container h4 {
-    margin-top: auto;
+    margin-top: 10px;
     margin-left: 0;
     color: rgb(214, 214, 214);
   }
@@ -365,13 +365,16 @@
     height: 40px;
     margin: 10px;
     margin-bottom: 0;
-    width: 40%;
+    width: max-content;
+    white-space: nowrap;
+    padding: 6px;
   }
 
   .project_github_btn:hover,
   .project_demo_btn:hover {
-    padding-top: 20px;
-    width: 40%;
+    padding-top: 0;
+    padding: 6px;
+    width: max-content;
   }
 
   .project_github_btn {

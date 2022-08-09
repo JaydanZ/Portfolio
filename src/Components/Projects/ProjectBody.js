@@ -93,119 +93,141 @@ const ProjectBody = (props) => {
       },
     });
 
-    projectBodyTl
-      .fromTo(
-        descHeaderRef,
-        {
-          x: -100,
-          autoAlpha: 0,
-        },
-        {
-          x: 0,
-          autoAlpha: 1,
-          duration: 0.8,
-          ease: "power1-out",
-        }
-      )
-      .fromTo(
-        descBodyRef,
-        {
-          x: -100,
-          autoAlpha: 0,
-        },
-        {
-          x: 0,
-          autoAlpha: 1,
-          duration: 0.8,
-          delay: 0.6,
-          ease: "power1-out",
-        },
-        "<"
-      )
-      .fromTo(
-        descRoleRef,
-        {
-          x: -100,
-          autoAlpha: 0,
-        },
-        {
-          x: 0,
-          autoAlpha: 1,
-          duration: 0.8,
-          delay: 0.6,
-          ease: "power1-out",
-        },
-        "<"
-      )
-      .fromTo(
-        descContainerRef,
-        {
-          "--height-max": "0%",
-        },
-        {
-          "--height-max": "90%",
-          duration: 0.8,
-          ease: "power1-out",
-        },
-        "<"
-      )
-      .fromTo(
-        stackHeaderRef,
-        {
-          x: -100,
-          autoAlpha: 0,
-        },
-        {
-          x: 0,
-          autoAlpha: 1,
-          duration: 0.8,
-          ease: "power1-out",
-        },
-        "<"
-      )
-      .fromTo(
-        descStackRef,
-        {
-          x: -100,
-          autoAlpha: 0,
-        },
-        {
-          x: 0,
-          autoAlpha: 1,
-          duration: 0.8,
-          ease: "power1-out",
-        },
-        "<"
-      )
-      .fromTo(
-        mockupRef,
-        {
-          x: -50,
-          autoAlpha: 0,
-        },
-        {
-          x: 0,
-          autoAlpha: 1,
-          duration: 0.8,
-          ease: "power1-out",
-        },
-        "<"
-      )
-      .fromTo(
-        btnContainerRef,
-        {
-          y: 40,
-          autoAlpha: 0,
-        },
-        {
-          y: 0,
-          autoAlpha: 1,
-          duration: 0.6,
-          delay: 0.5,
-          ease: "power1-out",
-        },
-        "<"
-      );
+    ScrollTrigger.matchMedia({
+      // Desktop
+      "(min-width: 901px)": () => {
+        projectBodyTl
+          .fromTo(
+            descHeaderRef,
+            {
+              x: -100,
+              autoAlpha: 0,
+            },
+            {
+              x: 0,
+              autoAlpha: 1,
+              duration: 0.8,
+              ease: "power1-out",
+            }
+          )
+          .fromTo(
+            descBodyRef,
+            {
+              x: -100,
+              autoAlpha: 0,
+            },
+            {
+              x: 0,
+              autoAlpha: 1,
+              duration: 0.8,
+              delay: 0.6,
+              ease: "power1-out",
+            },
+            "<"
+          )
+          .fromTo(
+            descRoleRef,
+            {
+              x: -100,
+              autoAlpha: 0,
+            },
+            {
+              x: 0,
+              autoAlpha: 1,
+              duration: 0.8,
+              delay: 0.6,
+              ease: "power1-out",
+            },
+            "<"
+          )
+          .fromTo(
+            descContainerRef,
+            {
+              "--height-max": "0%",
+            },
+            {
+              "--height-max": "90%",
+              duration: 0.8,
+              ease: "power1-out",
+            },
+            "<"
+          )
+          .fromTo(
+            stackHeaderRef,
+            {
+              x: -100,
+              autoAlpha: 0,
+            },
+            {
+              x: 0,
+              autoAlpha: 1,
+              duration: 0.8,
+              ease: "power1-out",
+            },
+            "<"
+          )
+          .fromTo(
+            descStackRef,
+            {
+              x: -100,
+              autoAlpha: 0,
+            },
+            {
+              x: 0,
+              autoAlpha: 1,
+              duration: 0.8,
+              ease: "power1-out",
+            },
+            "<"
+          )
+          .fromTo(
+            mockupRef,
+            {
+              x: -50,
+              autoAlpha: 0,
+            },
+            {
+              x: 0,
+              autoAlpha: 1,
+              duration: 0.8,
+              ease: "power1-out",
+            },
+            "<"
+          )
+          .fromTo(
+            btnContainerRef,
+            {
+              y: 40,
+              autoAlpha: 0,
+            },
+            {
+              y: 0,
+              autoAlpha: 1,
+              duration: 0.6,
+              delay: 0.5,
+              ease: "power1-out",
+            },
+            "<"
+          );
+      },
+
+      "(max-width: 900px)": () => {
+        projectBodyTl.fromTo(
+          descContainerRef,
+          {
+            y: 50,
+            autoAlpha: 0,
+          },
+          {
+            y: 0,
+            autoAlpha: 1,
+            duration: 0.5,
+            delay: 0.5,
+            ease: "power1-out",
+          }
+        );
+      },
+    });
   }, []);
   return (
     <div ref={(el) => (projectBodyRef = el)} className="project_body_container">
