@@ -368,6 +368,8 @@
     width: max-content;
     white-space: nowrap;
     padding: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .project_github_btn:hover,

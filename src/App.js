@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import * as THREE from "three";
 import planetImg from "./static/planet.png";
-import MoonPic from "./static/moon.png";
+import MoonPic from "./static/moon/moon.png";
 import ProjectsDisplay from "./Components/Projects/ProjectsDisplay";
 import AboutBody from "./Components/About/AboutBody";
 import ContactBody from "./Components/Contact/ContactBody";
@@ -25,6 +25,8 @@ const App = () => {
   let introCTAbtn = useRef();
 
   let projectsSec = useRef();
+  let projectsHeader = useRef();
+
   let aboutSec = useRef();
   let contactSec = useRef();
 
@@ -302,6 +304,12 @@ const App = () => {
 
     const introTl = gsap.timeline();
     const starFieldTl = gsap.timeline();
+    const projectHeaderTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: projectsSec,
+        start: "top 80%",
+      },
+    });
 
     introTl
       .fromTo(
@@ -474,6 +482,21 @@ const App = () => {
       }
     );
 
+    projectHeaderTl.fromTo(
+      projectsHeader,
+      {
+        y: 50,
+        autoAlpha: 0,
+      },
+      {
+        y: 0,
+        autoAlpha: 1,
+        duration: 0.3,
+        delay: 0.3,
+        ease: "power1-out",
+      }
+    );
+
     tick();
   }, []);
   return (
@@ -500,7 +523,6 @@ const App = () => {
           >
             Download CV
           </a>
-          {/* <button className="navbar_cv-download">Download CV</button> */}
         </div>
         <div className="navbar_mobile">
           <Hamburger
@@ -565,7 +587,7 @@ const App = () => {
       </section>
       <section className="projects" ref={(el) => (projectsSec = el)}>
         <div className="projects_header">
-          <h1>.Projects()</h1>
+          <h1 ref={(el) => (projectsHeader = el)}>.Projects()</h1>
         </div>
         <ProjectsDisplay projectArr={projectData} />
       </section>
