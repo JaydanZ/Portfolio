@@ -52,9 +52,9 @@ const projectData = [
     projectRole:
       "Designed and implemented UI. Developed algorithms to handle card shuffling, doubling down and UI updates.",
     projectStack: ["SCSS", "CSS", "Javascript", "HTML"],
-    projectLinks: 1,
+    projectLinks: 2,
     projectGithub: "https://github.com/JaydanZ/Blackjack",
-    projectDemo: "",
+    projectDemo: "https://javascriptblackjack.netlify.app/",
     mockup: "blackjack",
   },
 ];
