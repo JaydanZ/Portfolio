@@ -11,8 +11,9 @@
   z-index: +1;
   background: linear-gradient(
     180deg,
-    rgba(18, 18, 18, 1) 0%,
-    rgb(0, 34, 56, 0) 100%
+    rgba(12, 12, 12, 1) 0%,
+    rgba(12, 12, 12, 1) 70%,
+    rgba(0, 34, 56, 0) 100%
   );
 }
 
