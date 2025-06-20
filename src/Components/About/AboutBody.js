@@ -79,21 +79,14 @@ const AboutBody = () => {
           <h1 ref={(el) => (aboutBioHeader = el)}>Who am I?</h1>
           <div className="about_card" ref={(el) => (aboutCard = el)}>
             <h2>
-              I'm a fullstack developer with a passion for code that builds both
-              web and desktop applications.
+              Hey! I'm a Full-Stack software developer with 2.5 years of
+              hands-on experience building and maintaining web applications
+              across both frontend and backend systems.
             </h2>
             <h2>
-              My passion for web development started when I was developing my
-              capstone project for my final year of college which we later
-              named, “Snapnmix”. It gave me full exposure to working on a
-              fullstack application from designing and implementing the UI,
-              learning the little nuances of React and State management, source
-              control with Git and getting some exposure into our Node.js and
-              Express.js backend.
-            </h2>
-            <h2>
-              After finally completing the project at the end of my semester, I
-              decided that this is what I wanted to pursue as a career.
+              I graduated from Conestoga College's Software Engineering
+              Technology program in 2022, and I'm currently applying practical
+              development skills to deliver reliable, user-focused solutions.
             </h2>
             <h3>
               <span>Education:</span> Conestoga College - Software Engineering
