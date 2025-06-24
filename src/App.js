@@ -24,8 +24,10 @@ const App = () => {
   let moonRef = useRef();
   let introCTAbtn = useRef();
 
+  let experienceSec = useRef();
+  let experienceHeader = useRef();
+
   let projectsSec = useRef();
-  let projectsHeader = useRef();
 
   let aboutSec = useRef();
   let contactSec = useRef();
@@ -46,6 +48,17 @@ const App = () => {
     gsap.to(window, {
       duration: 2,
       scrollTo: introSec,
+      autoKill: true,
+      ease: "power2",
+    });
+    setMobileNav("");
+    setOpen(false);
+  };
+
+  const scrollToExperience = () => {
+    gsap.to(window, {
+      duration: 2,
+      scrollTo: experienceSec,
       autoKill: true,
       ease: "power2",
     });
@@ -475,7 +488,7 @@ const App = () => {
       {
         y: -3,
         scrollTrigger: {
-          trigger: ".projects",
+          trigger: ".experience",
           endTrigger: ".contact",
           scrub: 1,
         },
@@ -483,7 +496,7 @@ const App = () => {
     );
 
     projectHeaderTl.fromTo(
-      projectsHeader,
+      experienceHeader,
       {
         y: 50,
         autoAlpha: 0,
@@ -506,6 +519,9 @@ const App = () => {
           Jaydan
         </button>
         <div className={"navbar_sections " + mobileNavState}>
+          <button className="navbar_sections-text" onClick={scrollToExperience}>
+            .Experience()
+          </button>
           <button className="navbar_sections-text" onClick={scrollToProjects}>
             .Projects()
           </button>
@@ -585,10 +601,12 @@ const App = () => {
         ></img>
         <canvas className="webgl"></canvas>
       </section>
-      <section className="projects" ref={(el) => (projectsSec = el)}>
-        <div className="projects_header">
-          <h1 ref={(el) => (projectsHeader = el)}>.Projects()</h1>
+      <section className="experience" ref={(el) => (experienceSec = el)}>
+        <div className="experience_header">
+          <h1 ref={(el) => (experienceHeader = el)}>.Experience()</h1>
         </div>
+      </section>
+      <section className="projects" ref={(el) => (projectsSec = el)}>
         <ProjectsDisplay projectArr={projectData} />
       </section>
       <section className="about" ref={(el) => (aboutSec = el)}>

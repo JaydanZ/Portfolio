@@ -307,13 +307,14 @@ section {
   width: calc(170px + 40px);
 }
 
-.projects {
+.projects,
+.experience {
   height: max-content;
   justify-content: flex-start;
   color: white;
 }
 
-.projects_header {
+.experience_header {
   position: relative;
   display: flex;
   align-items: center;
@@ -324,7 +325,7 @@ section {
   z-index: +1;
 }
 
-.projects_header h1 {
+.experience_header h1 {
   font-family: var(--primary-ff);
   font-weight: bold;
   font-size: 5rem;
@@ -390,7 +391,7 @@ section {
   margin-bottom: 20px;
 }
 
-.projects_header::after {
+.experience_header::after {
   position: absolute;
   display: inline-block;
   content: "";
@@ -570,7 +571,7 @@ section {
     width: 40vw;
   }
 
-  .projects_header h1 {
+  .experience_header h1 {
     font-size: 16vw;
   }
 }
