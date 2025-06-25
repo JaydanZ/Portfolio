@@ -586,7 +586,7 @@ const App = () => {
                 className="intro_btn-container"
                 ref={(el) => (introCTAbtn = el)}
               >
-                <button className="intro_cta_btn" onClick={scrollToProjects}>
+                <button className="intro_cta_btn" onClick={scrollToExperience}>
                   See My Work
                 </button>
               </div>
