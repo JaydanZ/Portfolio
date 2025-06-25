@@ -6,9 +6,11 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import * as THREE from "three";
 import planetImg from "./static/planet.png";
 import MoonPic from "./static/moon/moon.png";
+import ExperiencesDisplay from "./Components/Experience/ExperiencesDisplay";
 import ProjectsDisplay from "./Components/Projects/ProjectsDisplay";
 import AboutBody from "./Components/About/AboutBody";
 import ContactBody from "./Components/Contact/ContactBody";
+import experienceData from "./data/experienceData";
 import projectData from "./data/projectData";
 import { Divide as Hamburger } from "hamburger-react";
 
@@ -605,6 +607,7 @@ const App = () => {
         <div className="experience_header">
           <h1 ref={(el) => (experienceHeader = el)}>.Experience()</h1>
         </div>
+        <ExperiencesDisplay experiences={experienceData} />
       </section>
       <section className="projects" ref={(el) => (projectsSec = el)}>
         <ProjectsDisplay projectArr={projectData} />
