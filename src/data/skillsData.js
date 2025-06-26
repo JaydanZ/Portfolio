@@ -7,8 +7,20 @@ const skillsData = [
         icon: "devicon-react-original",
       },
       {
+        tech: "Next.js",
+        icon: "devicon-nextjs-plain",
+      },
+      {
+        tech: "Redux",
+        icon: "devicon-redux-original",
+      },
+      {
         tech: "Javascript",
         icon: "devicon-javascript-plain",
+      },
+      {
+        tech: "Typescript",
+        icon: "devicon-typescript-plain",
       },
       {
         tech: "CSS",
@@ -56,12 +68,24 @@ const skillsData = [
         icon: "devicon-nodejs-plain",
       },
       {
+        tech: "Django",
+        icon: "devicon-django-plain",
+      },
+      {
         tech: "Express.js",
         icon: "devicon-express-original",
       },
       {
         tech: "MongoDB",
         icon: "devicon-mongodb-plain",
+      },
+      {
+        tech: "PostgreSQL",
+        icon: "devicon-postgresql-plain",
+      },
+      {
+        tech: "Firebase",
+        icon: "devicon-firebase-plain",
       },
       {
         tech: "Git",
