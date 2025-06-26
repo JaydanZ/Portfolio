@@ -13,7 +13,7 @@
   --secondary-main-clr: rgb(0, 35, 75);
   --body-btm-margin: 10px;
   --body-role-margin: 60px;
-  --max-width: 2400px;
+  --max-width: 1800px;
 }
 
 body::-webkit-scrollbar {
@@ -61,7 +61,7 @@ body::-webkit-scrollbar-thumb:hover {
   display: flex;
   width: 100vw;
   height: 85px;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -203,7 +203,7 @@ section {
   right: 3vw;
   height: 650px;
   width: auto;
-  margin-right: 10vw;
+  margin-right: 15vw;
   z-index: 1;
 }
 
@@ -211,7 +211,7 @@ section {
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  margin-left: 12vw;
+  margin-left: 19vw;
   z-index: 2;
 }
 
@@ -325,6 +325,7 @@ section {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
   height: 30vh;
   background-color: rgb(18, 18, 18);
@@ -336,7 +337,6 @@ section {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-left: 10vw;
   max-width: var(--max-width);
   width: 100%;
 }
