@@ -1,0 +1,9 @@
+.experiences_display_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(12, 12, 12);
+  z-index: +1;
+  width: 100%;
+  padding: 40px;
+}
