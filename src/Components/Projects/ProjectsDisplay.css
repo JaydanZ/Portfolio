@@ -11,6 +11,7 @@
   display: flex;
   height: max-content;
   width: 80%;
+  max-width: var(--max-width);
   flex-direction: column;
 }
 

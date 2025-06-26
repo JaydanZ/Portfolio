@@ -7,6 +7,7 @@
 .about_body-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   z-index: +1;
   background: linear-gradient(
@@ -17,13 +18,23 @@
   );
 }
 
-.about_body-container h1 {
+.about_max_width h1 {
   font-family: var(--primary-ff);
   font-size: 5rem;
   font-weight: bold;
-  margin-left: 10vw;
-  margin-right: auto;
+  /* margin-left: 10vw; */
+  margin-right: 100%;
   margin-top: 100px;
+}
+
+.about_max_width {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* width: 100%; */
+  max-width: var(--max-width);
+  margin-left: 10vw;
+  margin-right: 10vw;
 }
 
 .about_content-container {
@@ -38,7 +49,6 @@
   flex-direction: column;
   align-items: flex-start;
   width: 40%;
-  margin-left: 10vw;
   padding-right: 1vw;
 }
 

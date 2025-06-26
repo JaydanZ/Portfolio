@@ -13,6 +13,7 @@
   --secondary-main-clr: rgb(0, 35, 75);
   --body-btm-margin: 10px;
   --body-role-margin: 60px;
+  --max-width: 2400px;
 }
 
 body::-webkit-scrollbar {
@@ -69,6 +70,16 @@ body::-webkit-scrollbar-thumb:hover {
   backdrop-filter: saturate(180%) blur(10px);
 }
 
+.navbar_container {
+  max-width: var(--max-width);
+  width: 100%;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .navbar_mobile {
   display: none;
   margin-right: 10vw;
@@ -89,7 +100,7 @@ body::-webkit-scrollbar-thumb:hover {
   font-family: var(--primary-ff);
   font-weight: 600;
   font-size: 1.3rem;
-  margin-left: 10vw;
+  /* margin-left: 10vw; */
   border: none;
   transition: all ease-in-out 200ms;
   cursor: pointer;
@@ -105,14 +116,14 @@ body::-webkit-scrollbar-thumb:hover {
 
 .navbar_main {
   font-weight: 600;
-  margin-left: 10vw;
+  /* margin-left: 10vw; */
   z-index: 12;
 }
 
 .navbar_sections {
   display: flex;
   margin-left: auto;
-  margin-right: 10vw;
+  /* margin-right: 10vw; */
   align-items: center;
 }
 
@@ -325,11 +336,20 @@ section {
   z-index: +1;
 }
 
-.experience_header h1 {
+.experience_header_contents {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 10vw;
+  max-width: var(--max-width);
+  width: 100%;
+}
+
+.experience_header_contents h1 {
   font-family: var(--primary-ff);
   font-weight: bold;
   font-size: 5rem;
-  margin-left: 10vw;
+  /* margin-left: 10vw; */
 }
 
 .projects_card_glass_container {
@@ -420,6 +440,9 @@ section {
 .contact {
   /* background-color: #ffbd00; */
   color: black;
+}
+
+@media only screen and (min-width: 1920px) {
 }
 
 @media only screen and (max-width: 900px) {

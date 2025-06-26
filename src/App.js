@@ -517,30 +517,35 @@ const App = () => {
   return (
     <div className="App">
       <nav className={"navbar " + mobileNavState}>
-        <button className="navbar_main" onClick={scrollToIntro}>
-          Jaydan
-        </button>
-        <div className={"navbar_sections " + mobileNavState}>
-          <button className="navbar_sections-text" onClick={scrollToExperience}>
-            .Experience()
+        <div className="navbar_container">
+          <button className="navbar_main" onClick={scrollToIntro}>
+            Jaydan
           </button>
-          <button className="navbar_sections-text" onClick={scrollToProjects}>
-            .Projects()
-          </button>
-          <button className="navbar_sections-text" onClick={scrollToAbout}>
-            .About()
-          </button>
-          <button className="navbar_sections-text" onClick={scrollToContact}>
-            .Contact()
-          </button>
-          <a
-            href="https://drive.google.com/uc?export=download&id=1H8Ygnkodr2OyRNlOAoDlovXxU5tEwrYO"
-            className="navbar_cv-download"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Download CV
-          </a>
+          <div className={"navbar_sections " + mobileNavState}>
+            <button
+              className="navbar_sections-text"
+              onClick={scrollToExperience}
+            >
+              .Experience()
+            </button>
+            <button className="navbar_sections-text" onClick={scrollToProjects}>
+              .Projects()
+            </button>
+            <button className="navbar_sections-text" onClick={scrollToAbout}>
+              .About()
+            </button>
+            <button className="navbar_sections-text" onClick={scrollToContact}>
+              .Contact()
+            </button>
+            <a
+              href="https://drive.google.com/uc?export=download&id=1H8Ygnkodr2OyRNlOAoDlovXxU5tEwrYO"
+              className="navbar_cv-download"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Download CV
+            </a>
+          </div>
         </div>
         <div className="navbar_mobile">
           <Hamburger
@@ -605,7 +610,9 @@ const App = () => {
       </section>
       <section className="experience" ref={(el) => (experienceSec = el)}>
         <div className="experience_header">
-          <h1 ref={(el) => (experienceHeader = el)}>.Experience()</h1>
+          <div className="experience_header_contents">
+            <h1 ref={(el) => (experienceHeader = el)}>.Experience()</h1>
+          </div>
         </div>
         <ExperiencesDisplay experiences={experienceData} />
       </section>
