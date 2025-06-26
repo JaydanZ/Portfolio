@@ -558,44 +558,49 @@ const App = () => {
         </div>
       </nav>
       <section className="intro" ref={(el) => (introSec = el)}>
-        <div className="intro_container">
-          <div className="intro_text_container">
-            <div className="intro_text_layout">
-              <h2 className="intro_header" ref={(el) => (introHeader = el)}>
-                Hello there! I am
-              </h2>
-              <h1 className="intro_name" ref={(el) => (introName = el)}>
-                <span className="intro_name_span">Jaydan Zabar</span>
-              </h1>
-              <div
-                className="intro_footer_container"
-                ref={(el) => (introFooter = el)}
-              >
-                <h2 className="intro_footer_text">Fullstack Developer</h2>
-                <a
-                  href="https://www.linkedin.com/in/jaydanzabar/"
-                  className="intro_icons_link"
-                  target="_blank"
-                  rel="noreferrer"
+        <div className="intro_max_width_container">
+          <div className="intro_container">
+            <div className="intro_text_container">
+              <div className="intro_text_layout">
+                <h2 className="intro_header" ref={(el) => (introHeader = el)}>
+                  Hello there! I am
+                </h2>
+                <h1 className="intro_name" ref={(el) => (introName = el)}>
+                  <span className="intro_name_span">Jaydan Zabar</span>
+                </h1>
+                <div
+                  className="intro_footer_container"
+                  ref={(el) => (introFooter = el)}
                 >
-                  <i className="devicon-linkedin-plain intro_icons"></i>
-                </a>
-                <a
-                  href="https://github.com/JaydanZ"
-                  className="intro_icons_link"
-                  target="_blank"
-                  rel="noreferrer"
+                  <h2 className="intro_footer_text">Fullstack Developer</h2>
+                  <a
+                    href="https://www.linkedin.com/in/jaydanzabar/"
+                    className="intro_icons_link"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <i className="devicon-linkedin-plain intro_icons"></i>
+                  </a>
+                  <a
+                    href="https://github.com/JaydanZ"
+                    className="intro_icons_link"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <i className="devicon-github-original intro_icons"></i>
+                  </a>
+                </div>
+                <div
+                  className="intro_btn-container"
+                  ref={(el) => (introCTAbtn = el)}
                 >
-                  <i className="devicon-github-original intro_icons"></i>
-                </a>
-              </div>
-              <div
-                className="intro_btn-container"
-                ref={(el) => (introCTAbtn = el)}
-              >
-                <button className="intro_cta_btn" onClick={scrollToExperience}>
-                  See My Work
-                </button>
+                  <button
+                    className="intro_cta_btn"
+                    onClick={scrollToExperience}
+                  >
+                    See My Work
+                  </button>
+                </div>
               </div>
             </div>
           </div>
