@@ -1,6 +1,6 @@
 const experienceData = [
   {
-    jobTitle: "JCAII (Aviation Transportation Information Systems",
+    jobTitle: "JCAII",
     jobRole: "Software Developer",
     startDate: "Jan 2023",
     endDate: "June 2025",

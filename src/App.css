@@ -100,7 +100,6 @@ body::-webkit-scrollbar-thumb:hover {
   font-family: var(--primary-ff);
   font-weight: 600;
   font-size: 1.3rem;
-  /* margin-left: 10vw; */
   border: none;
   transition: all ease-in-out 200ms;
   cursor: pointer;
@@ -116,14 +115,12 @@ body::-webkit-scrollbar-thumb:hover {
 
 .navbar_main {
   font-weight: 600;
-  /* margin-left: 10vw; */
   z-index: 12;
 }
 
 .navbar_sections {
   display: flex;
   margin-left: auto;
-  /* margin-right: 10vw; */
   align-items: center;
 }
 
@@ -211,7 +208,6 @@ section {
 }
 
 .intro_text_container {
-  /* margin-left: auto; */
   width: 100%;
   display: flex;
   justify-content: flex-start;

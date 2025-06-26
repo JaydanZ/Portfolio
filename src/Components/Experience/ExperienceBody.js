@@ -8,20 +8,25 @@ const ExperienceBody = (props) => {
       <div className="experience_body_header">
         <div className="experience_title">{job.jobTitle}</div>
         <div className="experience_dates_container">
-          <div className="job_start_date">{job.startDate}</div>
-          <div className="job_end_date">{job.endDate}</div>
+          <div className="job_dates">
+            {job.startDate} - {job.endDate}
+          </div>
         </div>
       </div>
       <div className="experience_body">
-        <div className="experience_role"></div>
+        <div className="experience_role">{job.jobRole}</div>
         <div className="experience_tech_container">
           {job.technologies.map((tech) => (
-            <div>{tech}</div>
+            <h2>{tech}</h2>
           ))}
         </div>
+        <hr className="body-divider" />
         <div className="experience_acomplishments_container">
           {job.acomplishments.map((acomplishment) => (
-            <div>{acomplishment}</div>
+            <h2>
+              <span>- </span>
+              {acomplishment}
+            </h2>
           ))}
         </div>
       </div>

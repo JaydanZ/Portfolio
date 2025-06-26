@@ -22,7 +22,6 @@
   font-family: var(--primary-ff);
   font-size: 5rem;
   font-weight: bold;
-  /* margin-left: 10vw; */
   margin-right: 100%;
   margin-top: 100px;
 }
@@ -31,7 +30,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* width: 100%; */
   max-width: var(--max-width);
   margin-left: 10vw;
   margin-right: 10vw;
