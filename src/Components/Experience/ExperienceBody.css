@@ -7,7 +7,7 @@
   flex-direction: column;
   padding: 40px;
   width: 1200px;
-  height: 500px;
+  height: 100%;
   background: #141414;
   background: linear-gradient(46deg, rgb(12, 12, 12) 0%, rgb(27, 27, 27) 100%);
   border-radius: 12px;
@@ -15,6 +15,30 @@
   border-style: solid;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  position: relative;
+}
+
+.experience_body_container:before {
+  content: " ";
+  height: 25px;
+  width: 25px;
+  background-color: var(--primary-clr);
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: -61px;
+  top: 55px;
+}
+
+.experience_body_container:after {
+  content: " ";
+  width: 3px;
+  height: 105%;
+  display: block;
+  background-color: var(--primary-clr);
+  position: absolute;
+  left: -50px;
+  top: 0px;
 }
 
 .experience_body_header {
