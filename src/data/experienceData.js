@@ -4,7 +4,7 @@ const experienceData = [
     jobRole: "Software Developer",
     startDate: "Jan 2023",
     endDate: "June 2025",
-    technologies: ["React", "Django", "PostgreSQL", "Firebase"],
+    technologies: ["React", "Django", "PostgreSQL", "Firebase", "AWS"],
     acomplishments: [
       "Designed and developed a Personnel Data Reporting Page using React, Django and Firebase, streamlining employee data management for customers and significantly reducing manual administrative workload by automating key tracking processes",
       "Spearheaded frontend codebase refactoring by enhancing React component efficiency through use of hooks, memoization and package migrations, resulting in reduced unnecessary re-renders and improved load times by up to 40%",
