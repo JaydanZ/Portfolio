@@ -5,6 +5,7 @@ const ProjectsDisplay = (props) => {
   return (
     <div className="project_display_container">
       <div className="project_display">
+        <h1 className="project_display_header">.Projects()</h1>
         {props.projectArr.map((entry, index) => (
           <ProjectBody
             projectNum={"0" + (index + 1) + ". "}

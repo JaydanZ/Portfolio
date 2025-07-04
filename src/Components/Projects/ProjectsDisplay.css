@@ -7,6 +7,14 @@
   z-index: +1;
 }
 
+.project_display_header {
+  display: flex;
+  align-items: flex-start;
+  font-family: var(--primary-ff);
+  font-weight: bold;
+  font-size: 5rem;
+}
+
 .project_display {
   display: flex;
   height: max-content;
