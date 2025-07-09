@@ -22,7 +22,7 @@
 }
 
 .job_path_bar {
-  width: 3px;
+  width: 5px;
   margin-right: 40px;
   background: #00f255;
   background: #121212;
@@ -33,6 +33,12 @@
     rgba(0, 242, 85, 1) 90%,
     rgba(12, 12, 12, 1) 100%
   );
+  clip-path: polygon(
+    0 0,
+    100% 0%,
+    100% var(--job-bar-path),
+    0% var(--job-bar-path)
+  );
 }
 
 .job_container {
@@ -41,4 +47,15 @@
   justify-content: center;
   flex-direction: column;
   height: max-content;
+}
+
+@media only screen and (max-width: 900px) {
+  .job_container_boundary {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .job_bar_path {
+    width: 0px;
+  }
 }

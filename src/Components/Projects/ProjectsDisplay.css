@@ -32,3 +32,9 @@
     align-items: center;
   }
 }
+
+@media only screen and (max-width: 530px) {
+  .project_display_header {
+    font-size: 12vw;
+  }
+}

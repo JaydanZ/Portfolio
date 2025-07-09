@@ -3,6 +3,14 @@ import "./ExperienceBody.css";
 const ExperienceBody = (props) => {
   const { job } = props;
 
+  const mobile_window_width = 900;
+  const isMobile = window.innerWidth <= mobile_window_width ? true : false;
+
+  const jobAcomplishments =
+    isMobile && job.mobileAcomplishments
+      ? job.mobileAcomplishments
+      : job.acomplishments;
+
   return (
     <div className="experience_body_container">
       <div className="experience_body_header">
@@ -22,7 +30,7 @@ const ExperienceBody = (props) => {
         </div>
         <hr className="body-divider" />
         <div className="experience_acomplishments_container">
-          {job.acomplishments.map((acomplishment) => (
+          {jobAcomplishments.map((acomplishment) => (
             <h2>
               <span>- </span>
               {acomplishment}

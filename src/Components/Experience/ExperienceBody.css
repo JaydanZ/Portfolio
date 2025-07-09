@@ -98,3 +98,63 @@
   margin-bottom: 18px;
   text-align: left;
 }
+
+@media only screen and (max-width: 900px) {
+  .experience_body_container {
+    padding: 30px;
+  }
+
+  .experience_tech_container {
+    flex-flow: row wrap;
+  }
+
+  .experience_tech_container h2 {
+    font-size: 0.8rem;
+  }
+
+  .body-divider {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .experience_acomplishments_container h2 {
+    font-size: 0.8rem;
+  }
+
+  .experience_body_container:before {
+    width: 0;
+    height: 0;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .experience_body_header {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .experience_body_container {
+    padding: 20px;
+  }
+
+  .experience_dates_container {
+    padding: 7px;
+  }
+
+  .job_dates {
+    font-size: 0.8rem;
+  }
+
+  .experience_role {
+    margin-bottom: 10px;
+  }
+
+  .experience_tech_container h2 {
+    margin-top: 7px;
+    margin-bottom: 0;
+  }
+
+  /* .experience_acomplishments_container {
+    display: none;
+  } */
+}

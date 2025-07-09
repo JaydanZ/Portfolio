@@ -14,6 +14,7 @@
   --body-btm-margin: 10px;
   --body-role-margin: 60px;
   --max-width: 1800px;
+  --job-bar-path: 100%;
 }
 
 body::-webkit-scrollbar {
@@ -553,6 +554,14 @@ section {
     top: 10%;
     right: 20%;
     margin-right: 0;
+  }
+
+  .experience_header_contents {
+    justify-content: center;
+  }
+
+  .experience_header_contents h1 {
+    font-size: 4rem;
   }
 
   .contact {

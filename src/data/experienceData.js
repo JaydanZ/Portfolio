@@ -12,6 +12,13 @@ const experienceData = [
       "Optimized backend performance using Django and PostgreSQL by enhancing API endpoints and database queries, reducing response times and improving scalability under high-load conditions",
       "Troubleshot and resolved critical production issues in AWS S3 file processing pipelines, reducing system downtime for over 5,000 active users",
     ],
+    mobileAcomplishments: [
+      "Designed and developed a Personnel Data Reporting Page using React, Django and Firebase, streamlining employee data management for customers",
+      "Spearheaded frontend codebase refactoring by enhancing React component efficiency through use of hooks, memoization and package migrations",
+      "Implemented and maintained unit tests by utilizing Jest to ensure performance and reliability of JCAII’s Icelink platform",
+      "Optimized backend performance using Django and PostgreSQL by enhancing API endpoints and database queries",
+      "Troubleshot and resolved critical production issues in AWS S3 file processing pipelines",
+    ],
   },
 ];
 
