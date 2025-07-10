@@ -7,10 +7,19 @@
   z-index: +1;
 }
 
+.project_display_header {
+  display: flex;
+  align-items: flex-start;
+  font-family: var(--primary-ff);
+  font-weight: bold;
+  font-size: 5rem;
+}
+
 .project_display {
   display: flex;
   height: max-content;
   width: 80%;
+  max-width: var(--max-width);
   flex-direction: column;
 }
 
@@ -21,5 +30,11 @@
   }
   .project_display {
     align-items: center;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .project_display_header {
+    font-size: 12vw;
   }
 }

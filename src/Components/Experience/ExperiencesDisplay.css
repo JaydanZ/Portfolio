@@ -1,0 +1,65 @@
+.experiences_display_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(12, 12, 12);
+  z-index: +1;
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 130px;
+  position: relative;
+}
+
+.job_container_boundary {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--max-width);
+  margin-right: 10vw;
+  margin-left: 10vw;
+}
+
+.job_path_bar {
+  width: 5px;
+  margin-right: 40px;
+  background: #00f255;
+  background: #121212;
+  background: linear-gradient(
+    0deg,
+    rgba(12, 12, 12, 1) 3%,
+    rgba(0, 242, 85, 1) 50%,
+    rgba(0, 242, 85, 1) 90%,
+    rgba(12, 12, 12, 1) 100%
+  );
+  clip-path: polygon(
+    0 0,
+    100% 0%,
+    100% var(--job-bar-path),
+    0% var(--job-bar-path)
+  );
+}
+
+.job_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: max-content;
+}
+
+@media only screen and (max-width: 900px) {
+  .job_container_boundary {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .job_bar_path {
+    width: 0px;
+  }
+
+  .experiences_display_container {
+    padding-bottom: 40px;
+  }
+}

@@ -6,9 +6,11 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import * as THREE from "three";
 import planetImg from "./static/planet.png";
 import MoonPic from "./static/moon/moon.png";
+import ExperiencesDisplay from "./Components/Experience/ExperiencesDisplay";
 import ProjectsDisplay from "./Components/Projects/ProjectsDisplay";
 import AboutBody from "./Components/About/AboutBody";
 import ContactBody from "./Components/Contact/ContactBody";
+import experienceData from "./data/experienceData";
 import projectData from "./data/projectData";
 import { Divide as Hamburger } from "hamburger-react";
 
@@ -24,8 +26,10 @@ const App = () => {
   let moonRef = useRef();
   let introCTAbtn = useRef();
 
+  let experienceSec = useRef();
+  let experienceHeader = useRef();
+
   let projectsSec = useRef();
-  let projectsHeader = useRef();
 
   let aboutSec = useRef();
   let contactSec = useRef();
@@ -46,6 +50,17 @@ const App = () => {
     gsap.to(window, {
       duration: 2,
       scrollTo: introSec,
+      autoKill: true,
+      ease: "power2",
+    });
+    setMobileNav("");
+    setOpen(false);
+  };
+
+  const scrollToExperience = () => {
+    gsap.to(window, {
+      duration: 2,
+      scrollTo: experienceSec,
       autoKill: true,
       ease: "power2",
     });
@@ -304,10 +319,10 @@ const App = () => {
 
     const introTl = gsap.timeline();
     const starFieldTl = gsap.timeline();
-    const projectHeaderTl = gsap.timeline({
+    const experienceHeaderTl = gsap.timeline({
       scrollTrigger: {
         trigger: projectsSec,
-        start: "top 80%",
+        //start: "top 90%",
       },
     });
 
@@ -475,54 +490,82 @@ const App = () => {
       {
         y: -3,
         scrollTrigger: {
-          trigger: ".projects",
+          trigger: ".experience",
           endTrigger: ".contact",
           scrub: 1,
         },
       }
     );
 
-    projectHeaderTl.fromTo(
-      projectsHeader,
-      {
-        y: 50,
-        autoAlpha: 0,
+    ScrollTrigger.matchMedia({
+      "(max-width: 600px)": () => {
+        experienceHeaderTl.fromTo(
+          experienceHeader,
+          {
+            y: 50,
+            autoAlpha: 0,
+            start: "center center",
+          },
+          {
+            y: 0,
+            autoAlpha: 1,
+            duration: 0.5,
+            ease: "power1-out",
+          }
+        );
       },
-      {
-        y: 0,
-        autoAlpha: 1,
-        duration: 0.3,
-        delay: 0.3,
-        ease: "power1-out",
-      }
-    );
+      "(min-width: 601px)": () => {
+        experienceHeaderTl.fromTo(
+          experienceHeader,
+          {
+            y: 50,
+            autoAlpha: 0,
+          },
+          {
+            y: 0,
+            autoAlpha: 1,
+            duration: 0.5,
+            delay: 0.3,
+            ease: "power1-out",
+          }
+        );
+      },
+    });
 
     tick();
   }, []);
   return (
     <div className="App">
       <nav className={"navbar " + mobileNavState}>
-        <button className="navbar_main" onClick={scrollToIntro}>
-          Jaydan
-        </button>
-        <div className={"navbar_sections " + mobileNavState}>
-          <button className="navbar_sections-text" onClick={scrollToProjects}>
-            .Projects()
+        <div className="navbar_container">
+          <button className="navbar_main" onClick={scrollToIntro}>
+            Jaydan
           </button>
-          <button className="navbar_sections-text" onClick={scrollToAbout}>
-            .About()
-          </button>
-          <button className="navbar_sections-text" onClick={scrollToContact}>
-            .Contact()
-          </button>
-          <a
-            href="https://drive.google.com/uc?export=download&id=1H8Ygnkodr2OyRNlOAoDlovXxU5tEwrYO"
-            className="navbar_cv-download"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Download CV
-          </a>
+          <div className={"navbar_sections " + mobileNavState}>
+            <button
+              className="navbar_sections-text"
+              onClick={scrollToExperience}
+            >
+              .Experience()
+            </button>
+            <button className="navbar_sections-text" onClick={scrollToProjects}>
+              .Projects()
+            </button>
+            <button className="navbar_sections-text" onClick={scrollToAbout}>
+              .About()
+            </button>
+            <button className="navbar_sections-text" onClick={scrollToContact}>
+              .Contact()
+            </button>
+            <a
+              href="https://drive.google.com/uc?export=download&id=1H8Ygnkodr2OyRNlOAoDlovXxU5tEwrYO"
+              className="navbar_cv-download"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Download CV
+            </a>
+          </div>
         </div>
         <div className="navbar_mobile">
           <Hamburger
@@ -535,44 +578,49 @@ const App = () => {
         </div>
       </nav>
       <section className="intro" ref={(el) => (introSec = el)}>
-        <div className="intro_container">
-          <div className="intro_text_container">
-            <div className="intro_text_layout">
-              <h2 className="intro_header" ref={(el) => (introHeader = el)}>
-                Hello there! I am
-              </h2>
-              <h1 className="intro_name" ref={(el) => (introName = el)}>
-                <span className="intro_name_span">Jaydan Zabar</span>
-              </h1>
-              <div
-                className="intro_footer_container"
-                ref={(el) => (introFooter = el)}
-              >
-                <h2 className="intro_footer_text">Fullstack Developer</h2>
-                <a
-                  href="https://www.linkedin.com/in/jaydanzabar/"
-                  className="intro_icons_link"
-                  target="_blank"
-                  rel="noreferrer"
+        <div className="intro_max_width_container">
+          <div className="intro_container">
+            <div className="intro_text_container">
+              <div className="intro_text_layout">
+                <h2 className="intro_header" ref={(el) => (introHeader = el)}>
+                  Hello there! I am
+                </h2>
+                <h1 className="intro_name" ref={(el) => (introName = el)}>
+                  <span className="intro_name_span">Jaydan Zabar</span>
+                </h1>
+                <div
+                  className="intro_footer_container"
+                  ref={(el) => (introFooter = el)}
                 >
-                  <i className="devicon-linkedin-plain intro_icons"></i>
-                </a>
-                <a
-                  href="https://github.com/JaydanZ"
-                  className="intro_icons_link"
-                  target="_blank"
-                  rel="noreferrer"
+                  <h2 className="intro_footer_text">Fullstack Developer</h2>
+                  <a
+                    href="https://www.linkedin.com/in/jaydanzabar/"
+                    className="intro_icons_link"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <i className="devicon-linkedin-plain intro_icons"></i>
+                  </a>
+                  <a
+                    href="https://github.com/JaydanZ"
+                    className="intro_icons_link"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <i className="devicon-github-original intro_icons"></i>
+                  </a>
+                </div>
+                <div
+                  className="intro_btn-container"
+                  ref={(el) => (introCTAbtn = el)}
                 >
-                  <i className="devicon-github-original intro_icons"></i>
-                </a>
-              </div>
-              <div
-                className="intro_btn-container"
-                ref={(el) => (introCTAbtn = el)}
-              >
-                <button className="intro_cta_btn" onClick={scrollToProjects}>
-                  See My Work
-                </button>
+                  <button
+                    className="intro_cta_btn"
+                    onClick={scrollToExperience}
+                  >
+                    See My Work
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -585,10 +633,15 @@ const App = () => {
         ></img>
         <canvas className="webgl"></canvas>
       </section>
-      <section className="projects" ref={(el) => (projectsSec = el)}>
-        <div className="projects_header">
-          <h1 ref={(el) => (projectsHeader = el)}>.Projects()</h1>
+      <section className="experience" ref={(el) => (experienceSec = el)}>
+        <div className="experience_header">
+          <div className="experience_header_contents">
+            <h1 ref={(el) => (experienceHeader = el)}>.Experience()</h1>
+          </div>
         </div>
+        <ExperiencesDisplay experiences={experienceData} />
+      </section>
+      <section className="projects" ref={(el) => (projectsSec = el)}>
         <ProjectsDisplay projectArr={projectData} />
       </section>
       <section className="about" ref={(el) => (aboutSec = el)}>

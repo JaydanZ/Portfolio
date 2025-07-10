@@ -73,34 +73,36 @@ const AboutBody = () => {
   }, []);
   return (
     <div className="about_body-container" ref={(el) => (aboutContainer = el)}>
-      <h1 ref={(el) => (aboutHeader = el)}>.About()</h1>
-      <div className="about_content-container">
-        <div className="about_text-container">
-          <h1 ref={(el) => (aboutBioHeader = el)}>Who am I?</h1>
-          <div className="about_card" ref={(el) => (aboutCard = el)}>
-            <h2>
-              Hey! I'm a Full-Stack software developer with 2.5 years of
-              hands-on experience building and maintaining web applications
-              across both frontend and backend systems.
-            </h2>
-            <h2>
-              I graduated from Conestoga College's Software Engineering
-              Technology program in 2022, and I'm currently applying practical
-              development skills to deliver reliable, user-focused solutions.
-            </h2>
-            <h3>
-              <span>Education:</span> Conestoga College - Software Engineering
-              Technology
-            </h3>
-            <h4>
-              <span>Key Courses:</span> Web Design and Development, Mobile
-              Application Development, Embedded Systems, Data Structures,
-              Business Intelligence, System Analysis and Design, Advanced
-              Software Quality
-            </h4>
+      <div className="about_max_width">
+        <h1 ref={(el) => (aboutHeader = el)}>.About()</h1>
+        <div className="about_content-container">
+          <div className="about_text-container">
+            <h1 ref={(el) => (aboutBioHeader = el)}>Who am I?</h1>
+            <div className="about_card" ref={(el) => (aboutCard = el)}>
+              <h2>
+                Hey! I'm a Full-Stack software developer with 2.5 years of
+                hands-on experience building and maintaining web applications
+                across both frontend and backend systems.
+              </h2>
+              <h2>
+                I graduated from Conestoga College's Software Engineering
+                Technology program in 2022, and I'm currently applying practical
+                development skills to deliver reliable, user-focused solutions.
+              </h2>
+              <h3>
+                <span>Education:</span> Conestoga College - Software Engineering
+                Technology
+              </h3>
+              <h4>
+                <span>Key Courses:</span> Web Design and Development, Mobile
+                Application Development, Embedded Systems, Data Structures,
+                Business Intelligence, System Analysis and Design, Advanced
+                Software Quality
+              </h4>
+            </div>
           </div>
+          <SkillsBody skillsData={skillsData} />
         </div>
-        <SkillsBody skillsData={skillsData} />
       </div>
     </div>
   );
