@@ -115,6 +115,11 @@
 }
 
 @media only screen and (max-width: 900px) {
+  .about_max_width {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .about_body-container {
     padding-left: 80px;
     padding-right: 80px;
@@ -130,6 +135,10 @@
   .about_text-container {
     width: 100%;
     margin-left: 0;
+  }
+
+  .about_text-container h3 {
+    margin-top: 30px;
   }
 }
 
@@ -158,5 +167,9 @@
   .about_card h4 {
     font-size: 0.95rem;
     line-height: 1.6;
+  }
+
+  .about_text-container h4 {
+    font-size: 0.9rem;
   }
 }
