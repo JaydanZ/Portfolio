@@ -1,36 +1,17 @@
 import "./ExperienceBody.css";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const ExperienceBody = (props) => {
-  const [isMobile, setIsMobile] = useState(false);
-  const { job } = props;
+  const { job, isMobile } = props;
 
   let experienceBodyRef = useRef();
-
-  const mobile_max_width = 900;
 
   const jobAcomplishments =
     isMobile && job.mobileAcomplishments
       ? job.mobileAcomplishments
       : job.acomplishments;
-
-  const determineIsMobile = () => {
-    if (window.innerWidth <= mobile_max_width) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-  };
-
-  useEffect(() => {
-    // Handle Is Mobile Determination
-    window.addEventListener("resize", determineIsMobile);
-    return () => {
-      window.removeEventListener("resize", determineIsMobile);
-    };
-  });
 
   useEffect(() => {
     // Handles animations
@@ -53,7 +34,7 @@ const ExperienceBody = (props) => {
         y: 0,
         autoAlpha: 1,
         duration: 0.5,
-        delay: 1.3,
+        delay: 0.5,
         ease: "power1-out",
       }
     );

@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const ExperiencesDisplay = (props) => {
+  const { isMobile } = props;
   let experiencePathRef = useRef();
 
   useEffect(() => {
@@ -45,7 +46,7 @@ const ExperiencesDisplay = (props) => {
         ></div>
         <div className="job_container">
           {props.experiences.map((job) => (
-            <ExperienceBody job={job} />
+            <ExperienceBody isMobile={isMobile} job={job} />
           ))}
         </div>
       </div>

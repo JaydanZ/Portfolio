@@ -17,7 +17,10 @@ import { Divide as Hamburger } from "hamburger-react";
 const App = () => {
   const [projectArrState, setProjectArr] = useState([]);
   const [isOpen, setOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const [mobileNavState, setMobileNav] = useState("");
+
+  const mobile_max_width = 900;
 
   let introSec = useRef();
   let introHeader = useRef();
@@ -25,14 +28,31 @@ const App = () => {
   let introFooter = useRef();
   let moonRef = useRef();
   let introCTAbtn = useRef();
-
   let experienceSec = useRef();
   let experienceHeader = useRef();
-
   let projectsSec = useRef();
-
   let aboutSec = useRef();
   let contactSec = useRef();
+
+  const determineIsMobile = () => {
+    if (window.innerWidth <= mobile_max_width) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  };
+
+  useEffect(() => {
+    determineIsMobile();
+  });
+
+  useEffect(() => {
+    // Handle Is Mobile Determination on Resize
+    window.addEventListener("resize", determineIsMobile);
+    return () => {
+      window.removeEventListener("resize", determineIsMobile);
+    };
+  });
 
   const toggleMobileNav = (toggled) => {
     if (toggled) {
@@ -321,8 +341,7 @@ const App = () => {
     const starFieldTl = gsap.timeline();
     const experienceHeaderTl = gsap.timeline({
       scrollTrigger: {
-        trigger: projectsSec,
-        //start: "top 90%",
+        trigger: experienceSec,
       },
     });
 
@@ -504,12 +523,13 @@ const App = () => {
           {
             y: 50,
             autoAlpha: 0,
-            start: "center center",
+            start: "top top",
           },
           {
             y: 0,
             autoAlpha: 1,
             duration: 0.5,
+            delay: 0.5,
             ease: "power1-out",
           }
         );
@@ -639,7 +659,7 @@ const App = () => {
             <h1 ref={(el) => (experienceHeader = el)}>.Experience()</h1>
           </div>
         </div>
-        <ExperiencesDisplay experiences={experienceData} />
+        <ExperiencesDisplay experiences={experienceData} isMobile={isMobile} />
       </section>
       <section className="projects" ref={(el) => (projectsSec = el)}>
         <ProjectsDisplay projectArr={projectData} />
