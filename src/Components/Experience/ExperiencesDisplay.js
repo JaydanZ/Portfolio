@@ -3,27 +3,38 @@ import ExperienceBody from "./ExperienceBody";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 const ExperiencesDisplay = (props) => {
   let experiencePathRef = useRef();
 
-  // useEffect(() => {
-  //   // Handle animations
-  //   // Register GSAP Pluggins
-  //   gsap.registerPlugin(ScrollTrigger);
+  useEffect(() => {
+    // Handles animations
+    gsap.registerPlugin(ScrollTrigger);
 
-  //   const experienceDisplayTl = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: experienceContainerRef,
-  //       start: "center bottom",
-  //     },
-  //   });
+    const experienceDisplayTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: experiencePathRef,
+        start: "center bottom",
+      },
+    });
 
-  //   // ScrollTrigger.matchMedia({
-
-  //   // })
-  // });
+    ScrollTrigger.matchMedia({
+      "(min-width: 901px)": () => {
+        experienceDisplayTl.fromTo(
+          experiencePathRef,
+          {
+            "--job-bar-path": "0%",
+          },
+          {
+            "--job-bar-path": "100%",
+            duration: 1,
+            delay: 0.8,
+            ease: "power1-out",
+          }
+        );
+      },
+    });
+  });
 
   return (
     <div className="experiences_display_container">

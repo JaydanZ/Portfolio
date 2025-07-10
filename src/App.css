@@ -14,7 +14,7 @@
   --body-btm-margin: 10px;
   --body-role-margin: 60px;
   --max-width: 1800px;
-  --job-bar-path: 100%;
+  --job-bar-path: 0%;
 }
 
 body::-webkit-scrollbar {
@@ -572,7 +572,8 @@ section {
 
 @media only screen and (max-width: 530px) {
   .intro_text_container {
-    margin-bottom: 200px;
+    margin-top: 250px;
+    margin-bottom: 0;
   }
   .intro_text_layout {
     width: 100%;
@@ -608,6 +609,10 @@ section {
     height: 50px;
     font-size: 4vw;
     width: 40vw;
+  }
+
+  .experience_header {
+    height: 20vh;
   }
 
   .experience_header h1 {

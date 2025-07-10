@@ -319,10 +319,10 @@ const App = () => {
 
     const introTl = gsap.timeline();
     const starFieldTl = gsap.timeline();
-    const projectHeaderTl = gsap.timeline({
+    const experienceHeaderTl = gsap.timeline({
       scrollTrigger: {
         trigger: projectsSec,
-        start: "top 80%",
+        //start: "top 90%",
       },
     });
 
@@ -497,20 +497,40 @@ const App = () => {
       }
     );
 
-    projectHeaderTl.fromTo(
-      experienceHeader,
-      {
-        y: 50,
-        autoAlpha: 0,
+    ScrollTrigger.matchMedia({
+      "(max-width: 600px)": () => {
+        experienceHeaderTl.fromTo(
+          experienceHeader,
+          {
+            y: 50,
+            autoAlpha: 0,
+            start: "center center",
+          },
+          {
+            y: 0,
+            autoAlpha: 1,
+            duration: 0.5,
+            ease: "power1-out",
+          }
+        );
       },
-      {
-        y: 0,
-        autoAlpha: 1,
-        duration: 0.3,
-        delay: 0.3,
-        ease: "power1-out",
-      }
-    );
+      "(min-width: 601px)": () => {
+        experienceHeaderTl.fromTo(
+          experienceHeader,
+          {
+            y: 50,
+            autoAlpha: 0,
+          },
+          {
+            y: 0,
+            autoAlpha: 1,
+            duration: 0.5,
+            delay: 0.3,
+            ease: "power1-out",
+          }
+        );
+      },
+    });
 
     tick();
   }, []);

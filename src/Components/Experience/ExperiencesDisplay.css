@@ -6,7 +6,7 @@
   z-index: +1;
   width: 100%;
   padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 130px;
   position: relative;
 }
 
@@ -57,5 +57,9 @@
   }
   .job_bar_path {
     width: 0px;
+  }
+
+  .experiences_display_container {
+    padding-bottom: 40px;
   }
 }

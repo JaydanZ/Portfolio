@@ -1,18 +1,69 @@
 import "./ExperienceBody.css";
+import { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const ExperienceBody = (props) => {
+  const [isMobile, setIsMobile] = useState(false);
   const { job } = props;
 
-  const mobile_window_width = 900;
-  const isMobile = window.innerWidth <= mobile_window_width ? true : false;
+  let experienceBodyRef = useRef();
+
+  const mobile_max_width = 900;
 
   const jobAcomplishments =
     isMobile && job.mobileAcomplishments
       ? job.mobileAcomplishments
       : job.acomplishments;
 
+  const determineIsMobile = () => {
+    if (window.innerWidth <= mobile_max_width) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  };
+
+  useEffect(() => {
+    // Handle Is Mobile Determination
+    window.addEventListener("resize", determineIsMobile);
+    return () => {
+      window.removeEventListener("resize", determineIsMobile);
+    };
+  });
+
+  useEffect(() => {
+    // Handles animations
+    gsap.registerPlugin(ScrollTrigger);
+
+    const experienceBodyTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: experienceBodyRef,
+        start: "center bottom",
+      },
+    });
+
+    experienceBodyTl.fromTo(
+      experienceBodyRef,
+      {
+        y: 50,
+        autoAlpha: 0,
+      },
+      {
+        y: 0,
+        autoAlpha: 1,
+        duration: 0.5,
+        delay: 1.3,
+        ease: "power1-out",
+      }
+    );
+  });
+
   return (
-    <div className="experience_body_container">
+    <div
+      className="experience_body_container"
+      ref={(el) => (experienceBodyRef = el)}
+    >
       <div className="experience_body_header">
         <div className="experience_title">{job.jobTitle}</div>
         <div className="experience_dates_container">
