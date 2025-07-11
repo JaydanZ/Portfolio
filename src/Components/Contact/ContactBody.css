@@ -324,6 +324,10 @@ section {
 }
 
 @media only screen and (max-width: 600px) {
+  .portfolio_footer {
+    height: 75px;
+  }
+
   .contact_card_header {
     margin-top: 10px;
     margin-left: 10px;

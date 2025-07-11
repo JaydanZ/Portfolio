@@ -46,14 +46,6 @@ const App = () => {
     determineIsMobile();
   });
 
-  useEffect(() => {
-    // Handle Is Mobile Determination on Resize
-    window.addEventListener("resize", determineIsMobile);
-    return () => {
-      window.removeEventListener("resize", determineIsMobile);
-    };
-  });
-
   const toggleMobileNav = (toggled) => {
     if (toggled) {
       // open nav menu
