@@ -16,7 +16,7 @@
   align-items: stretch;
   justify-content: space-between;
   width: 100%;
-  max-width: var(--max-width);
+  max-width: 1603px;
   margin-right: 10vw;
   margin-left: 10vw;
 }
