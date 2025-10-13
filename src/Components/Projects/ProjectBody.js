@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SnapnmixMockup from "../../static/snapnmix/snapnmix-mockup.png";
 import LiveLiftMockup from "../../static/livelift/livelift-mockup.png";
 import FDMSMockup from "../../static/fdms/fdms-mockup.png";
-import BlackjackMockup from "../../static/blackjack/blackjack-mockup.png";
+import SynosongMockup from "../../static/synosong/synosong-mockup.png";
 
 const ProjectBody = (props) => {
   const [buttonCount, setButtonCount] = useState();
@@ -33,33 +33,24 @@ const ProjectBody = (props) => {
 
   const checkMockup = () => {
     if (props.projectMockup === "snapnmix") {
-      // mockupImg.push(SnapnmixHome);
-      // mockupImg.push(SnapnmixAccount);
-      // mockupImg.push(SnapnmixScan);
       mockupImg.push(SnapnmixMockup);
       mockupClass = "app_mockup";
       return;
     }
 
-    if (props.projectMockup === "blackjack") {
-      // mockupImg.push(BlackjackGame);
-      // mockupImg.push(BlackjackBet);
-      mockupImg.push(BlackjackMockup);
+    if (props.projectMockup === "synosong") {
+      mockupImg.push(SynosongMockup);
       mockupClass = "app_mockup";
       return;
     }
 
     if (props.projectMockup === "livelift") {
-      // mockupImg.push(LiveLiftHome);
-      // mockupImg.push(LiveLiftProgram);
       mockupImg.push(LiveLiftMockup);
       mockupClass = "app_mockup";
       return;
     }
 
     if (props.projectMockup === "fdms") {
-      // mockupImg.push(FDMSHome);
-      // mockupImg.push(FDMSData);
       mockupImg.push(FDMSMockup);
       mockupClass = "app_mockup";
       return;

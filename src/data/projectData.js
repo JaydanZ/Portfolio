@@ -21,6 +21,25 @@ const projectData = [
     mockup: "snapnmix",
   },
   {
+    projectName: "Synosong",
+    projectBody:
+      "A full stack application to query songs from Spotify’s API using synonyms based on randomly generated or user-inputted words",
+    projectRole:
+      "Developed REST API's to handle user authentication with Next Auth, Implemented Spotify's API on Next.js backend",
+    projectStack: [
+      "React",
+      "Next.js",
+      "Next Auth",
+      "Typescript",
+      "Redux",
+      "SCSS",
+    ],
+    projectLinks: 2,
+    projectGithub: "https://github.com/JaydanZ/SynoSong",
+    projectDemo: "https://synosong.vercel.app/",
+    mockup: "synosong",
+  },
+  {
     projectName: "Live Lift",
     projectBody:
       "A bodybuilding strength training web application for storing exercises for user created workout routines. Developed for MegaHackathon 2022 to promote good health and well-being.",
@@ -44,18 +63,6 @@ const projectData = [
       "https://github.com/JaydanZ/Flight-Data-Management-System--FDMS-",
     projectDemo: "",
     mockup: "fdms",
-  },
-  {
-    projectName: "Blackjack",
-    projectBody:
-      "A web application that simulates the casino banking game, Blackjack.",
-    projectRole:
-      "Designed and implemented UI. Developed algorithms to handle card shuffling, doubling down and UI updates.",
-    projectStack: ["SCSS", "CSS", "Javascript", "HTML"],
-    projectLinks: 2,
-    projectGithub: "https://github.com/JaydanZ/Blackjack",
-    projectDemo: "https://javascriptblackjack.netlify.app/",
-    mockup: "blackjack",
   },
 ];
 
