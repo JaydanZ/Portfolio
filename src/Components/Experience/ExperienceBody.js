@@ -20,7 +20,7 @@ const ExperienceBody = (props) => {
     const experienceBodyTl = gsap.timeline({
       scrollTrigger: {
         trigger: experienceBodyRef,
-        start: "center bottom",
+        start: "top bottom",
       },
     });
 
