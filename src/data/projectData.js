@@ -4,7 +4,7 @@ const projectData = [
     projectBody:
       "A cocktail recipe finder web app that queries databases for popular recipes based upon user-uploaded images of ingredients.",
     projectRole:
-      "Built and Designed Sign In, Scan, Account Pages. Implemented Google's Cloud AI on backend.",
+      "Built and Designed Sign In, Scan, Account Pages. Implemented Google's Cloud Vision AI on backend.",
     projectStack: [
       "React",
       "Express.JS",
@@ -17,7 +17,7 @@ const projectData = [
     ],
     projectLinks: 2,
     projectGithub: "https://github.com/JaydanZ/Snap-N-Mix",
-    projectDemo: "https://snapnmix.com/",
+    projectDemo: "https://snapnmix.netlify.app/",
     mockup: "snapnmix",
   },
   {
