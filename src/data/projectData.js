@@ -13,7 +13,6 @@ const projectData = [
       "Bootstrap",
       "CSS",
       "Javascript",
-      "Heroku",
     ],
     projectLinks: 2,
     projectGithub: "https://github.com/JaydanZ/Snap-N-Mix",
