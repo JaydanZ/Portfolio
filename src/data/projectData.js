@@ -16,7 +16,7 @@ const projectData = [
     ],
     projectLinks: 2,
     projectGithub: "https://github.com/JaydanZ/Snap-N-Mix",
-    projectDemo: "https://snapnmix.netlify.app/",
+    projectDemo: "https://snapnmix.net/",
     mockup: "snapnmix",
   },
   {
