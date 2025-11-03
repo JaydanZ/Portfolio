@@ -46,8 +46,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 40%;
-  padding-right: 1vw;
+  width: 50%;
+  padding-right: 50px;
 }
 
 .about_text-container h1 {
