@@ -108,7 +108,7 @@ const AboutBody = () => {
                 <span>Key Courses:</span>
                 <div>
                 {keyCourses.map((course) => (
-                  <h4><span> - </span>{course}</h4> 
+                  <h4><span> • </span>{course}</h4> 
                 ))}
                 </div>
               </h3>
