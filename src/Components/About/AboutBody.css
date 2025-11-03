@@ -138,6 +138,7 @@
   .about_text-container {
     width: 100%;
     margin-left: 0;
+    padding-right: 0;
   }
 
   .about_text-container h3 {
@@ -147,8 +148,8 @@
 
 @media only screen and (max-width: 600px) {
   .about_body-container {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .about_body-container h1 {
