@@ -1,19 +1,7 @@
 const skillsData = [
   {
-    category: "Front-end",
+    category: "Languages",
     skills: [
-      {
-        tech: "React.js",
-        icon: "devicon-react-original",
-      },
-      {
-        tech: "Next.js",
-        icon: "devicon-nextjs-plain",
-      },
-      {
-        tech: "Redux",
-        icon: "devicon-redux-original",
-      },
       {
         tech: "Javascript",
         icon: "devicon-javascript-plain",
@@ -21,6 +9,18 @@ const skillsData = [
       {
         tech: "Typescript",
         icon: "devicon-typescript-plain",
+      },
+      {
+        tech: "C#",
+        icon: "devicon-csharp-line",
+      },
+      {
+        tech: "Python",
+        icon: "devicon-python-plain",
+      },
+      {
+        tech: "SQL",
+        icon: "devicon-azuresqldatabase-plain"
       },
       {
         tech: "CSS",
@@ -35,37 +35,37 @@ const skillsData = [
         icon: "devicon-sass-original",
       },
       {
-        tech: "Bootstrap",
-        icon: "devicon-bootstrap-plain",
+        tech: "Git",
+        icon: "devicon-git-plain",
       },
     ],
   },
   {
-    category: "Back-end",
+    category: "Technologies",
     skills: [
       {
-        tech: "C",
-        icon: "devicon-c-line",
+        tech: "React.js",
+        icon: "devicon-react-original",
       },
       {
-        tech: "C++",
-        icon: "devicon-cplusplus-line",
+        tech: "Next.js",
+        icon: "devicon-nextjs-plain",
       },
       {
-        tech: "C#",
-        icon: "devicon-csharp-line",
-      },
-      {
-        tech: "Python",
-        icon: "devicon-python-plain",
-      },
-      {
-        tech: "MySQL",
-        icon: "devicon-mysql-plain",
+        tech: "Redux",
+        icon: "devicon-redux-original",
       },
       {
         tech: "Node.js",
         icon: "devicon-nodejs-plain",
+      },
+      {
+        tech: "Jest",
+        icon: "devicon-jest-plain"
+      },
+      {
+        tech: "Pytest",
+        icon: "devicon-pytest-plain"
       },
       {
         tech: "Django",
@@ -74,6 +74,35 @@ const skillsData = [
       {
         tech: "Express.js",
         icon: "devicon-express-original",
+      },
+      {
+        tech: "AWS",
+        icon: "devicon-amazonwebservices-plain-wordmark",
+      },
+      {
+        tech: "Redis",
+        icon: "devicon-redis-plain",
+      },
+      {
+        tech: "Docker",
+        icon: "devicon-docker-plain",
+      },
+      {
+        tech: "Kubernetes",
+        icon: "devicon-kubernetes-plain"
+      },
+      {
+        tech: "Bootstrap",
+        icon: "devicon-bootstrap-plain",
+      },
+    ],
+  },
+  {
+    category: "Databases",
+    skills: [
+      {
+        tech: "MySQL",
+        icon: "devicon-mysql-plain",
       },
       {
         tech: "MongoDB",
@@ -87,12 +116,8 @@ const skillsData = [
         tech: "Firebase",
         icon: "devicon-firebase-plain",
       },
-      {
-        tech: "Git",
-        icon: "devicon-git-plain",
-      },
-    ],
-  },
+    ]
+  }
 ];
 
 export default skillsData;

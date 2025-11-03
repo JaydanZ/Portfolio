@@ -28,7 +28,7 @@ const SkillsBody = (props) => {
         y: 0,
         autoAlpha: 1,
         duration: 0.3,
-        delay: 0.3,
+        delay: 1,
         ease: "power1-out",
       }
     );
@@ -42,8 +42,8 @@ const SkillsBody = (props) => {
       {
         y: 0,
         autoAlpha: 1,
-        duration: 0.5,
-        delay: 0.4,
+        duration: 0.3,
+        delay: 0.3,
         ease: "power1-out",
       }
     );
