@@ -65,10 +65,34 @@
 .about_card span {
   font-family: var(--primary-ff);
   font-size: 1.25rem;
-  font-weight: 400;
   margin: 0;
   text-align: start;
+  font-weight: 400;
   background-color: #0d0d0d;
+}
+
+.about_card h2 {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about_card h3 {
+  font-size: 1.25rem;
+  margin-top: 50px;
+}
+
+.about_card h4 {
+  font-size: 1.05rem;
+  margin-top: 5px;
+}
+
+.about_card span {
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin: 0;
+  margin-right: 10px;
+  color: var(--tertiary-clr);
 }
 
 .about_card {
@@ -91,27 +115,6 @@
   top: 0;
   left: 0;
   background-color: var(--primary-clr);
-}
-
-.about_card h2 {
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.about_text-container h3 {
-  margin-top: 50px;
-}
-
-.about_text-container h4 {
-  margin-top: 20px;
-}
-
-.about_text-container span {
-  font-weight: bold;
-  font-size: 1.6rem;
-  margin: 0;
-  margin-right: 10px;
-  color: var(--tertiary-clr);
 }
 
 @media only screen and (max-width: 900px) {

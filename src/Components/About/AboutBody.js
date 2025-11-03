@@ -11,6 +11,15 @@ const AboutBody = () => {
   let aboutBioHeader = useRef();
   let aboutCard = useRef();
 
+  const keyCourses = [
+    "Web Design and Development",
+    "Mobile Application Development",
+    "Embedded Systems",
+    "Data Structures",
+    "Business Intelligence",
+    "System Analysis and Design"
+  ]
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -80,7 +89,7 @@ const AboutBody = () => {
             <h1 ref={(el) => (aboutBioHeader = el)}>Who am I?</h1>
             <div className="about_card" ref={(el) => (aboutCard = el)}>
               <h2>
-                Hey! I'm a Full-Stack software developer with 2.5 years of
+                Hey! I'm a Full-Stack software developer with over 2.5 years of
                 hands-on experience building and maintaining web applications
                 across both frontend and backend systems.
               </h2>
@@ -90,15 +99,19 @@ const AboutBody = () => {
                 development skills to deliver reliable, user-focused solutions.
               </h2>
               <h3>
-                <span>Education:</span> Conestoga College - Software Engineering
-                Technology
+                <span>Education:</span  >
+                <h4>
+                Conestoga College - Software Engineering Technology
+                </h4>
               </h3>
-              <h4>
-                <span>Key Courses:</span> Web Design and Development, Mobile
-                Application Development, Embedded Systems, Data Structures,
-                Business Intelligence, System Analysis and Design, Advanced
-                Software Quality
-              </h4>
+              <h3>
+                <span>Key Courses:</span>
+                <div>
+                {keyCourses.map((course) => (
+                  <h4><span> - </span>{course}</h4> 
+                ))}
+                </div>
+              </h3>
             </div>
           </div>
           <SkillsBody skillsData={skillsData} />
