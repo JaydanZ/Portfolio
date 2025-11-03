@@ -12,7 +12,7 @@
   font-weight: bold;
   margin: 0;
   margin-bottom: 50px;
-  color: white;
+  color: var(--primary-clr);
 }
 
 .skills_display-container {
@@ -27,5 +27,6 @@
   .skills_body-container {
     margin-top: 50px;
     margin-right: 0;
+    width: 100%;
   }
 }
